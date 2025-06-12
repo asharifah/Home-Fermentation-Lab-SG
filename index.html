@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Fermentation Lab Singapore | DIY Probiotics & Kombucha Kits</title>
+    <meta name="description" content="Learn fermentation in Singapore's tropical climate. Complete guides for kombucha, kimchi & probiotics. Expert tips for HDB apartments.">
+    <meta name="keywords" content="fermentation singapore, kombucha brewing singapore, probiotics singapore, home fermentation">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Page Animations */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth page load animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #8b9c6c, #a8b56a);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pageLoadOut 1.5s ease-in-out forwards;
+        }
+        
+        @keyframes pageLoadOut {
+            0% { opacity: 1; }
+            70% { opacity: 1; }
+            100% { opacity: 0; pointer-events: none; }
+        }
+        
+        /* Scroll-triggered animations */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Header animation */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(139, 156, 108, 0.1);
+            transform: translateY(-100%);
+            animation: slideDownHeader 1s ease-out 0.5s forwards;
+        }
+        
+        @keyframes slideDownHeader {
+            to { transform: translateY(0); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #6b7c3f;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .logo-main {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #4a3728;
+        }
+        
+        .logo-sub {
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #8b9c6c;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-links a {
+            color: #2c2c2c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+        }
+        
+        .nav-links a:hover {
+            color: #6b7c3f;
+            background: rgba(139, 156, 108, 0.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 156, 108, 0.9), rgba(168, 181, 106, 0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="organic" patternUnits="userSpaceOnUse" width="60" height="60"><circle fill="rgba(255,255,255,0.1)" cx="30" cy="30" r="8"/><circle fill="rgba(255,255,255,0.05)" cx="10" cy="10" r="4"/><circle fill="rgba(255,255,255,0.05)" cx="50" cy="50" r="4"/></pattern></defs><rect fill="url(%23organic)" width="1200" height="600"/></svg>');
+            color: white;
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(248, 246, 240, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(232, 228, 220, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+        
+        .hero-text p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #e6d3b7, #d4a574);
+            color: #4a3728;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(230, 211, 183, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid rgba(212, 165, 116, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(230, 211, 183, 0.6);
+            background: linear-gradient(45deg, #f0e4d2, #e6d3b7);
+            border-color: #d4a574;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #faf9f7 0%, #f0f0f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle fill="rgba(139,156,108,0.03)" cx="200" cy="150" r="100"/><circle fill="rgba(168,181,106,0.02)" cx="800" cy="400" r="150"/><circle fill="rgba(139,156,108,0.02)" cx="1000" cy="100" r="80"/></svg>');
+            animation: floatBackground 20s ease-in-out infinite;
+        }
+        
+        @keyframes floatBackground {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            color: #6b7c3f;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b9c6c, #a8b56a);
+            border-radius: 2px;
+            animation: expandLine 1.5s ease-out 0.5s forwards;
+        }
+        
+        @keyframes expandLine {
+            to { width: 80px; }
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #6d5d4f;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+        
+        .feature-row:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: translateX(50px);
+            animation: slideInFromRight 1s ease-out forwards;
+        }
+        
+        .feature-row:nth-child(1) { animation-delay: 0.2s; }
+        .feature-row:nth-child(2) { animation-delay: 0.4s; }
+        .feature-row:nth-child(3) { animation-delay: 0.6s; }
+        .feature-row:nth-child(4) { animation-delay: 0.8s; }
+        
+        @keyframes slideInFromLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInFromRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .feature-visual {
+            flex: 0 0 300px;
+            height: 250px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(139, 156, 108, 0.3);
+            transition: all 0.5s ease;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f6f0, #e8e4dc);
+        }
+        
+        .feature-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+        
+        .feature-visual:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 60px rgba(139, 156, 108, 0.4);
+        }
+        
+        .feature-visual:hover img {
+            transform: scale(1.1);
+        }
+        
+        .feature-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(139, 156, 108, 0.1), transparent);
+            border-radius: 20px;
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        .feature-visual:hover::before {
+            opacity: 0;
+        }
+        
+        .feature-content {
+            flex: 1;
+            padding: 2rem;
+        }
+        
+        .feature-content h3 {
+            color: #4a3728;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .feature-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #8b9c6c, #a8b56a);
+            border-radius: 2px;
+        }
+        
+        .feature-content p {
+            color: #6d5d4f;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        
+        .feature-highlight {
+            background: linear-gradient(135deg, rgba(139, 156, 108, 0.1), rgba(168, 181, 106, 0.05));
+            padding: 3rem;
+            border-radius: 30px;
+            border-left: 6px solid #8b9c6c;
+            margin: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInScale 1s ease-out 1.2s forwards;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .feature-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .feature-highlight h3 {
+            color: #6b7c3f;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-highlight p {
+            color: #4a3728;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #f8f6f0, #ffffff);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(139, 156, 108, 0.1);
+            transition: all 0.3s;
+            border: 1px solid rgba(139, 156, 108, 0.2);
+            position: relative;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b9c6c, #a8b56a);
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(139, 156, 108, 0.15);
+        }
+        
+        .service-card h3 {
+            color: #6b7c3f;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            margin-bottom: 2rem;
+            color: #6d5d4f;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: #6b7c3f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #e6d3b7, #f0e4d2);
+            border-radius: 25px;
+            border: 2px solid #d4a574;
+        }
+        
+        .service-link:hover {
+            background: linear-gradient(45deg, #d4a574, #c89761);
+            color: white;
+            transform: translateX(5px);
+            border-color: #c89761;
+        }
+        
+        .service-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .service-link:hover::after {
+            transform: translateX(3px);
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #8b9c6c, #a8b56a);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle fill="rgba(255,255,255,0.1)" cx="100" cy="100" r="80"/><circle fill="rgba(255,255,255,0.05)" cx="800" cy="200" r="120"/><circle fill="rgba(255,255,255,0.08)" cx="1000" cy="50" r="60"/></svg>');
+            opacity: 0.7;
+        }
+        
+        .stats-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, #d4a574 0%, #c89761 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle fill="rgba(255,255,255,0.1)" cx="100" cy="100" r="80"/><circle fill="rgba(255,255,255,0.05)" cx="800" cy="200" r="120"/><circle fill="rgba(255,255,255,0.08)" cx="1000" cy="50" r="60"/></svg>');
+            opacity: 0.7;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .newsletter p {
+            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            outline: none;
+            transition: box-shadow 0.3s;
+            background: rgba(255,255,255,0.95);
+            color: #4a3728;
+        }
+        
+        .newsletter-form input:focus {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .newsletter-form button {
+            background: linear-gradient(45deg, #e6d3b7, #d4a574);
+            color: #4a3728;
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: linear-gradient(45deg, #f0e4d2, #e6d3b7);
+            border-color: #d4a574;
+        }
+        
+        /* Footer */
+        footer {
+            background: #4a3728;
+            color: #e8e4dc;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .disclaimer {
+            background: rgba(139, 156, 108, 0.2);
+            color: #8b9c6c;
+            padding: 1.5rem;
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(139, 156, 108, 0.3);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+            
+            nav {
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form input {
+                min-width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .feature-row {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .feature-visual {
+                flex: 0 0 150px;
+                height: 150px;
+            }
+            
+            .feature-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div style="color: white; font-size: 2rem; font-weight: 600;">Home Fermentation Lab</div>
+    </div>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Home Fermentation Lab Singapore Logo">
+                <div class="logo-text">
+                    <span class="logo-main">HOME FERMENTATION LAB</span>
+                    <span class="logo-sub">SINGAPORE</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kombucha-kits.html">Kombucha Kits</a></li>
+                <li><a href="asian-fermentation.html">Asian Fermentation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Master Fermentation in Singapore</h1>
+                    <p>Transform your kitchen into a tropical fermentation lab. From kombucha to kimchi, discover the ancient art of fermentation adapted for Singapore's unique climate.</p>
+                    <a href="#services" class="cta-button">Start Your Journey</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-fermentation.jpg" alt="Fermentation products in Singapore kitchen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Home Fermentation?</h2>
+                <p>Discover the benefits of mastering fermentation in Singapore's tropical environment</p>
+            </div>
+            <div class="features-flow">
+                <div class="feature-row">
+                    <div class="feature-visual">
+                        <img src="images/tropical-fermentation.jpg" alt="Fermentation in tropical climate">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Tropical Climate Expertise</h3>
+                        <p>Our methods are specifically designed for Singapore's hot, humid environment. No more failed fermentation due to temperature issues. Perfect techniques for year-round success with professional guidance and proven results.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-row">
+                    <div class="feature-visual">
+                        <img src="images/hdb-fermentation-setup.jpg" alt="HDB apartment fermentation setup">
+                    </div>
+                    <div class="feature-content">
+                        <h3>HDB-Optimized Solutions</h3>
+                        <p>Space-efficient fermentation setups perfect for Singapore apartments. Start fermenting without taking over your kitchen. Smart storage and organization tips included for maximum efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-row">
+                    <div class="feature-visual">
+                        <img src="images/traditional-asian-ferments.jpg" alt="Traditional Asian fermented foods">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Traditional Asian Methods</h3>
+                        <p>Rediscover ancestral fermentation wisdom - kimchi, tempeh, miso, and more - with modern safety standards. Connect with Singapore's rich cultural heritage through time-tested techniques.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-highlight">
+                    <h3>Join Singapore's Growing Fermentation Community</h3>
+                    <p>Over 1,000 satisfied customers have transformed their health and saved money through our expert-guided fermentation programs. Start your journey today!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Kombucha Brewing Kits Singapore</h3>
+                    <p>Complete starter sets for brewing kombucha in Singapore's tropical climate. Includes SCOBY, pH strips, glass vessels, and detailed Singapore-specific brewing guide with humidity control tips and troubleshooting support.</p>
+                    <a href="kombucha-kits.html" class="service-link">Explore Kombucha Kits</a>
+                </div>
+                <div class="service-card">
+                    <h3>Asian Fermentation Workshop Singapore</h3>
+                    <p>Hands-on classes for traditional fermentation techniques. Learn kimchi, tempeh, and miso making with local Singapore ingredients and climate adaptations. Small group sessions with expert guidance.</p>
+                    <a href="asian-fermentation.html" class="service-link">Join Workshop</a>
+                </div>
+                <div class="service-card">
+                    <h3>Fermentation Supplies Singapore</h3>
+                    <p>Premium jars, cultures, and equipment sourced for tropical conditions. Everything you need for successful fermentation in Singapore's unique climate. Quality guaranteed, locally sourced when possible.</p>
+                    <a href="#supplies" class="service-link">Shop Supplies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-content">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Happy Fermenters</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Workshop Sessions</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>95%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Expert Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <div class="container">
+                <h2>Join Singapore's Fermentation Community</h2>
+                <p>Get weekly fermentation tips, Singapore-specific guides, and exclusive workshop updates delivered to your inbox. Join over 1,000 local fermentation enthusiasts!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email for fermentation tips" required>
+                    <button type="submit">Get Weekly Tips</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Home Fermentation Lab Singapore. Empowering healthy living through traditional fermentation wisdom.</p>
+            </div>
+        </div>
+        <div class="disclaimer">
+            This website is created for educational purposes as part of IT335C Social Media Analytics assignment at Nanyang Polytechnic.
+        </div>
+    </footer>
+
+    <script>
+        // Page load animation
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.page-loader').style.display = 'none';
+            }, 1500);
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.services, .stats, .newsletter');
+            scrollElements.forEach(el => {
+                el.classList.add('scroll-fade');
+                observer.observe(el);
+            });
+        });
+
+        // Newsletter form handling
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            const input = this.querySelector('input');
+            
+            // Animation feedback
+            button.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+                alert('Thanks for joining our fermentation community! Check your email for your welcome guide.');
+                input.value = '';
+            }, 150);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < hero.offsetHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Dynamic nav background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+            }
+        });
+    </script>
+</body>
+</html>

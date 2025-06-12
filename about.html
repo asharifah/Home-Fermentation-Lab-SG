@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Home Fermentation Lab Singapore | Traditional Asian Fermentation Experts</title>
+    <meta name="description" content="Learn about Singapore's premier fermentation workshop experts. Traditional Asian techniques adapted for tropical climate. Expert instructors, authentic methods, community-focused learning.">
+    <meta name="keywords" content="about fermentation lab singapore, asian fermentation experts singapore, traditional fermentation instructors, kimchi tempeh miso experts singapore">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header - MATCHING INDEX.HTML */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(139, 156, 108, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #6b7c3f;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .logo-main {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #4a3728;
+        }
+        
+        .logo-sub {
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #8b9c6c;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-links a {
+            color: #2c2c2c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+        }
+        
+        .nav-links a:hover {
+            color: #6b7c3f;
+            background: rgba(139, 156, 108, 0.05);
+        }
+        
+        .nav-links a.active {
+            color: #6b7c3f;
+            background: rgba(139, 156, 108, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 156, 108, 0.95), rgba(168, 181, 106, 0.95));
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Story Section */
+        .story {
+            padding: 8rem 0;
+            background: #fafafa;
+        }
+        
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .story-text h2 {
+            font-size: 2.8rem;
+            color: #6b7c3f;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .story-text p {
+            font-size: 1.1rem;
+            color: #6d5d4f;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .story-highlights {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(139, 156, 108, 0.1);
+            border-left: 5px solid #8b9c6c;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .highlight-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #8b9c6c, #a8b56a);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .highlight-text h4 {
+            color: #4a3728;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .highlight-text p {
+            color: #6d5d4f;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            color: #6b7c3f;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #8b9c6c, #a8b56a);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #6d5d4f;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 156, 108, 0.1);
+            border: 1px solid rgba(139, 156, 108, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(139, 156, 108, 0.2);
+        }
+        
+        .member-photo {
+            height: 250px;
+            background: linear-gradient(135deg, #e8e4dc, #f8f6f0);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .member-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b9c6c, #a8b56a);
+            z-index: 2;
+        }
+        
+        .member-info {
+            padding: 2rem;
+        }
+        
+        .member-info h3 {
+            color: #4a3728;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: #8b9c6c;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .member-bio {
+            color: #6d5d4f;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .member-specialties {
+            list-style: none;
+        }
+        
+        .member-specialties li {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .member-specialties li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #8b9c6c;
+            font-weight: bold;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f8f6f0, #ffffff);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(139, 156, 108, 0.1);
+            border-top: 4px solid #8b9c6c;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(139, 156, 108, 0.2);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #8b9c6c, #a8b56a);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.5rem;
+            color: white;
+        }
+        
+        .value-card h3 {
+            color: #4a3728;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .value-card p {
+            color: #6d5d4f;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #d4a574, #c89761);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle fill="rgba(255,255,255,0.1)" cx="100" cy="100" r="80"/><circle fill="rgba(255,255,255,0.05)" cx="800" cy="200" r="120"/></svg>');
+            opacity: 0.7;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #4a3728;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #4a3728;
+            color: #e8e4dc;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .disclaimer {
+            background: rgba(139, 156, 108, 0.2);
+            color: #8b9c6c;
+            padding: 1.5rem;
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(139, 156, 108, 0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Home Fermentation Lab Singapore Logo">
+                <div class="logo-text">
+                    <span class="logo-main">HOME FERMENTATION LAB</span>
+                    <span class="logo-sub">SINGAPORE</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kombucha-kits.html">Kombucha Kits</a></li>
+                <li><a href="asian-fermentation.html">Asian Fermentation</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>About Home Fermentation Lab Singapore</h1>
+                <p>Dedicated to preserving traditional Asian fermentation techniques while adapting them for modern Singapore living. Join our community of fermentation enthusiasts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Our Story & Mission</h2>
+                    <p>Founded in 2020, Home Fermentation Lab Singapore was born from a passion for preserving traditional Asian fermentation techniques in our modern tropical environment. Our founders recognized that ancient wisdom needed contemporary adaptation to thrive in Singapore's unique climate.</p>
+                    <p>We believe that fermentation is more than just food preparation—it's a connection to cultural heritage, a path to better health, and a sustainable way of living. Our mission is to make these time-honored techniques accessible to every Singaporean household.</p>
+                    <p>Through our workshops, we've trained over 500 students in authentic Korean kimchi making, Indonesian tempeh cultivation, and Japanese miso production, all carefully adapted for Singapore's tropical conditions.</p>
+                </div>
+                <div class="story-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🏆</div>
+                        <div class="highlight-text">
+                            <h4>Singapore's Premier Fermentation School</h4>
+                            <p>First dedicated Asian fermentation workshop in Singapore</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🌿</div>
+                        <div class="highlight-text">
+                            <h4>Climate-Adapted Techniques</h4>
+                            <p>Traditional methods modified for tropical humidity and temperature</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">👨‍🏫</div>
+                        <div class="highlight-text">
+                            <h4>Expert Certified Instructors</h4>
+                            <p>Trained in Asia and certified in traditional fermentation methods</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🤝</div>
+                        <div class="highlight-text">
+                            <h4>Community-Focused Learning</h4>
+                            <p>Building Singapore's fermentation community one workshop at a time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Expert Team</h2>
+                <p>Our certified instructors bring years of experience and authentic training from across Asia</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/sarah.jpg" alt="Sarah Kim - Lead Kimchi Instructor">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Kim</h3>
+                        <div class="member-role">Lead Kimchi Instructor</div>
+                        <p class="member-bio">Trained in traditional kimchi making in Busan, Korea. Sarah has adapted authentic Korean techniques for Singapore's tropical climate, specializing in vegetable selection and fermentation timing.</p>
+                        <ul class="member-specialties">
+                            <li>Traditional Korean kimchi techniques</li>
+                            <li>Tropical climate adaptations</li>
+                            <li>Vegetable fermentation timing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/ahmad.jpg" alt="Ahmad Rahman - Tempeh Master">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ahmad Rahman</h3>
+                        <div class="member-role">Tempeh Master</div>
+                        <p class="member-bio">Born in Java, Indonesia, Ahmad brings authentic tempeh-making knowledge to Singapore. His expertise in spore cultivation and humidity control makes him Singapore's premier tempeh instructor.</p>
+                        <ul class="member-specialties">
+                            <li>Traditional Indonesian tempeh methods</li>
+                            <li>Spore cultivation techniques</li>
+                            <li>Humidity and temperature control</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/yuki.jpg" alt="Yuki Tanaka - Miso & Koji Specialist">
+                    </div>
+                    <div class="member-info">
+                        <h3>Yuki Tanaka</h3>
+                        <div class="member-role">Miso & Koji Specialist</div>
+                        <p class="member-bio">Certified in traditional Japanese fermentation from Kyoto, Yuki specializes in koji cultivation and long-term miso aging. Her knowledge of Japanese fermentation science is unparalleled in Southeast Asia.</p>
+                        <ul class="member-specialties">
+                            <li>Traditional Japanese miso production</li>
+                            <li>Koji cultivation and maintenance</li>
+                            <li>Long-term aging techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide our approach to fermentation education</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🏮</div>
+                    <h3>Cultural Authenticity</h3>
+                    <p>We preserve the true essence of traditional Asian fermentation techniques, honoring the cultural heritage and stories behind each method.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Sustainable Practices</h3>
+                    <p>Fermentation naturally supports sustainable living. We teach methods that reduce food waste and promote healthy, environmentally-conscious eating.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Community Building</h3>
+                    <p>We believe learning is better together. Our workshops foster connections between participants, creating lasting friendships and support networks.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📚</div>
+                    <h3>Continuous Learning</h3>
+                    <p>We're committed to ongoing education, constantly researching new adaptations and improvements to help our students succeed in Singapore's climate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Ready to Join Our Community?</h2>
+                <p>Start your fermentation journey with Singapore's most experienced instructors</p>
+                <a href="asian-fermentation.html" class="cta-button">Explore Our Workshops</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Home Fermentation Lab Singapore. Preserving Asian fermentation traditions.</p>
+            </div>
+        </div>
+        <div class="disclaimer">
+            This website is created for educational purposes as part of IT335C Social Media Analytics assignment at Nanyang Polytechnic.
+        </div>
+    </footer>
+</body>
+</html>
